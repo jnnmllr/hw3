@@ -1,6 +1,7 @@
 #include <cmath>
 #include <iostream>
 #include <cstdlib>
+#include <ctime>
 
 using namespace std;
 
@@ -8,10 +9,12 @@ void fill(double* p, const int N);
 void varmean(double &mean, double &var, double* p, const int N);
 
 int main(){
-   const int N = 50;
+   const int N = 100;
    double p[N];
    double mean = 0;
    double var = 0;
+
+srand(time(NULL));
 
 fill(p, N);
 varmean(mean,var,p,N);
